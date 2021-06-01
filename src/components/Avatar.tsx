@@ -38,6 +38,7 @@ const Picture = styled.picture`
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+  border: 2px solid red;
 
   > div:first-child {
     border-radius: 50%;
