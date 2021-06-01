@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=992d4ba80433"
   },
   "dependencies": {
     "next": "10.2.3",
@@ -25,6 +26,7 @@
     "@types/styled-components": "^5.1.9",
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.12.0",
+    "chromatic": "^5.8.3",
     "prettier": "^2.3.0",
     "typescript": "4.3.2"
   }
