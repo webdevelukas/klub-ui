@@ -1,21 +1,13 @@
 import styled from "styled-components";
 import NextImage from "next/image";
 import { Mail, Phone } from "../../elements/icons";
+import { User } from "../../types";
 
 export type Props = {
-  user: {
-    image: {
-      url: string;
-      alt: string;
-    };
-    name: string;
-    role?: string;
-    email?: string;
-    phone?: string;
-  };
+  user: User;
 };
 
-export function Avatar({ user }: Props) {
+function Avatar({ user }: Props) {
   const { image, name, role, email, phone } = user;
   const hasEmailOrPhone = email || phone;
 
@@ -24,16 +16,16 @@ export function Avatar({ user }: Props) {
       <ImageWrapper>
         <NextImage
           src={image.url || "/placeholder.svg"}
-          alt={image.alt || "Placeholder Image for user"}
+          alt={image.url ? name : `Placeholder Image for ${name}`}
           layout="fill"
           objectFit="cover"
         />
       </ImageWrapper>
       <Wrapper>
-        <div>
+        <Details>
           <Name>{name}</Name>
           {role && <Role>{role}</Role>}
-        </div>
+        </Details>
         {hasEmailOrPhone && (
           <IconList>
             {email && (
@@ -61,10 +53,11 @@ export function Avatar({ user }: Props) {
   );
 }
 
+export default Avatar;
+
 const Container = styled.article`
   display: grid;
-  grid-auto-columns: auto;
-  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
   column-gap: var(--medium-spacing);
   place-items: center left;
   justify-content: left;
@@ -72,14 +65,15 @@ const Container = styled.article`
   padding: var(--medium-spacing);
 
   @media screen and (min-width: 992px) {
+    grid-template-columns: auto 30%;
     justify-content: center;
   }
 `;
 
 const ImageWrapper = styled.div`
   position: relative;
+  padding-bottom: 100%;
   width: 5.625rem;
-  height: 5.625rem;
   border-radius: 50%;
 
   > div:first-child {
@@ -105,6 +99,13 @@ const IconList = styled.div`
 const Name = styled.p`
   font-weight: bold;
   font-size: 1.25rem;
+`;
+
+const Details = styled.div`
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+  row-gap: var(--small-spacing);
 `;
 
 const Role = styled.p`
