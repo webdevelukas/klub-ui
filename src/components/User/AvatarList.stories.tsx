@@ -5,7 +5,7 @@ export default {
   title: "User/AvatarList",
   component: AvatarList,
   parameters: {
-    componentSubtitle: "Displays an Image, name and role of an user",
+    componentSubtitle: "Displays as List of users",
   },
 } as Meta;
 
