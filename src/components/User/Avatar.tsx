@@ -24,6 +24,7 @@ export function Avatar({ user }: Props) {
       <ImageWrapper>
         <NextImage
           src={image.url || "/placeholder.svg"}
+          alt={image.alt || "Placeholder Image for user"}
           layout="fill"
           objectFit="cover"
         />
