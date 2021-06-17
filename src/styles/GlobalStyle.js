@@ -6,6 +6,13 @@ const GlobalStyle = createGlobalStyle`${css`
   *::after {
     box-sizing: border-box;
   }
+  html {
+    --content-background: white;
+    --small-spacing: 0.5rem;
+    --medium-spacing: 1rem;
+    --large-spacing: 2rem;
+  }
+
   html,
   body {
     padding: 0;

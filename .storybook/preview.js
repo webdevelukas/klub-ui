@@ -28,4 +28,8 @@ export const parameters = {
     element: "#root",
     manual: false,
   },
+  backgrounds: {
+    default: "Grey",
+    values: [{ name: "Grey", value: "#E0E0E0" }],
+  },
 };
