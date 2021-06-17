@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`${css`
     box-sizing: border-box;
   }
   html {
+    --main-color: #820000;
     --content-background: white;
     --small-spacing: 0.5rem;
     --medium-spacing: 1rem;
@@ -23,6 +24,9 @@ const GlobalStyle = createGlobalStyle`${css`
     font-size: 16px;
   }
 
+  h1,
+  h2,
+  h3,
   p {
     margin: 0;
   }
