@@ -174,6 +174,10 @@ const TableCell = styled.td`
   height: 100%;
   padding: var(--small-spacing);
   min-width: 1rem;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  text-align: center;
 `;
 
 const Caption = styled.caption`
