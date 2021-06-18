@@ -198,6 +198,7 @@ const TableCell = styled.td`
 
   :nth-of-type(1) {
     position: sticky;
+    position: -webkit-sticky;
     left: 0;
     z-index: 5;
   }
