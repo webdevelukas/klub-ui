@@ -120,6 +120,7 @@ function getRankingColor(index: number, leagueMeta: leagueMeta) {
 }
 
 const Table = styled.table`
+  position: relative;
   display: grid;
   width: 100%;
   border-collapse: collapse;
@@ -133,12 +134,19 @@ const TableBody = styled.tbody`
   grid-auto-rows: auto;
   grid-auto-flow: row;
   row-gap: 1px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const TableRow = styled.tr`
   display: grid;
   background-color: var(--content-background);
-  grid-template-columns: 2rem 3rem 3fr 1fr 1fr 1fr;
+  grid-template-columns: 2rem 3rem 3fr repeat(3, 1fr);
   column-gap: var(--small-spacing);
   place-items: center;
 `;
@@ -146,6 +154,15 @@ const TableRow = styled.tr`
 const TableHeader = styled.th`
   font-size: 0.75rem;
   font-weight: normal;
+  padding-top: var(--small-spacing);
+  width: 100%;
+  height: 100%;
+
+  :nth-of-type(1) {
+    position: sticky;
+    left: 0;
+    z-index: 5;
+  }
 `;
 
 const TeamHeader = styled.th`
@@ -169,7 +186,7 @@ const TeamName = styled.td`
 `;
 
 const TableCell = styled.td`
-  background-color: var(--rank-color, none);
+  background-color: var(--rank-color, var(--content-background));
   width: 100%;
   height: 100%;
   padding: var(--small-spacing);
@@ -178,6 +195,12 @@ const TableCell = styled.td`
   place-items: center;
   justify-content: center;
   text-align: center;
+
+  :nth-of-type(1) {
+    position: sticky;
+    left: 0;
+    z-index: 5;
+  }
 `;
 
 const Caption = styled.caption`
