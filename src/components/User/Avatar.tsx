@@ -15,7 +15,7 @@ function Avatar({ user }: Props) {
     <Container>
       <ImageWrapper>
         <NextImage
-          src={image.url || "/placeholder.svg"}
+          src={image.url || "/placeholders/avatar.svg"}
           alt={image.url ? name : `Placeholder Image for ${name}`}
           layout="fill"
           objectFit="cover"
