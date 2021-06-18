@@ -1,15 +1,15 @@
 import { Story, Meta } from "@storybook/react";
-import DepartmentCard, { Props } from "./DepartmentCard";
+import Card, { Props } from "./Card";
 
 export default {
   title: "Department/Card",
-  component: DepartmentCard,
+  component: Card,
   parameters: {
     componentSubtitle: "Displays an Image, name and role of an user",
   },
 } as Meta;
 
-const Template: Story<Props> = (args) => <DepartmentCard {...args} />;
+const Template: Story<Props> = (args) => <Card {...args} />;
 
 export const Soccer = Template.bind({});
 Soccer.args = {

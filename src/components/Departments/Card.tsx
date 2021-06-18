@@ -6,7 +6,7 @@ export type Props = {
   department: Department;
 };
 
-function DepartmentCard({ department }: Props) {
+function Card({ department }: Props) {
   const { name, image } = department;
 
   return (
@@ -24,7 +24,7 @@ function DepartmentCard({ department }: Props) {
   );
 }
 
-export default DepartmentCard;
+export default Card;
 
 const Container = styled.article`
   display: grid;
