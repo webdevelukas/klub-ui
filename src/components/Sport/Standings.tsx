@@ -146,7 +146,7 @@ const TableBody = styled.tbody`
 const TableRow = styled.tr`
   display: grid;
   background-color: var(--content-background);
-  grid-template-columns: 2rem 3rem 3fr repeat(3, 1fr);
+  grid-template-columns: 2rem 3rem minmax(8rem, 3fr) repeat(3, 1fr);
   column-gap: var(--small-spacing);
   place-items: center;
 `;
@@ -183,6 +183,12 @@ const TeamName = styled.td`
   text-align: left;
   justify-self: left;
   border: none;
+  hyphens: auto;
+  line-break: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 
 const TableCell = styled.td`
