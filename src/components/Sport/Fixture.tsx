@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import NextImage from "next/image";
+import { renderDate } from "../../services";
 
 export type Props = {
   match: {
@@ -34,7 +35,7 @@ function Fixture({ match }: Props) {
           />
         </TeamLogo>
       </Scoring>
-      <Meta>{date}</Meta>
+      <Meta>{renderDate(date)}</Meta>
     </Article>
   );
 }
