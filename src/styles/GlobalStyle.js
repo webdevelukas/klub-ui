@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`${css`
     --small-spacing: 0.5rem;
     --medium-spacing: 1rem;
     --large-spacing: 2rem;
+    --border-radius: 3px;
   }
 
   html,
