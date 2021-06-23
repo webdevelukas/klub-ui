@@ -17,8 +17,8 @@ const PageTemplate: Story<FixtureProps> = (args) => (
   </PageSection>
 );
 
-export const WithoutDetails = Template.bind({});
-WithoutDetails.args = {
+export const Normal = Template.bind({});
+Normal.args = {
   match: {
     homeTeam: {
       name: "",
@@ -40,8 +40,8 @@ WithoutDetails.args = {
   },
 };
 
-export const WithoutDetailsResult = PageTemplate.bind({});
-WithoutDetailsResult.args = {
+export const NormalPageSection = PageTemplate.bind({});
+NormalPageSection.args = {
   match: {
     homeTeam: {
       name: "",
@@ -63,8 +63,8 @@ WithoutDetailsResult.args = {
   },
 };
 
-export const WithDetails = Template.bind({});
-WithDetails.args = {
+export const Detailed = Template.bind({});
+Detailed.args = {
   layout: "details",
   match: {
     homeTeam: {
@@ -90,8 +90,8 @@ WithDetails.args = {
   },
 };
 
-export const WithDetailsWithoutNewsUrl = Template.bind({});
-WithDetailsWithoutNewsUrl.args = {
+export const DetailedWithoutNewsUrl = Template.bind({});
+DetailedWithoutNewsUrl.args = {
   layout: "details",
   match: {
     homeTeam: {
@@ -114,5 +114,29 @@ WithDetailsWithoutNewsUrl.args = {
     competitionName: "413 Kreisklasse 3",
     matchday: 23,
     newsUrl: "",
+  },
+};
+
+export const Minified = Template.bind({});
+Minified.args = {
+  layout: "minified",
+  match: {
+    homeTeam: {
+      name: "",
+      logo: {
+        url: "https://www.tsvpaunzhausen.de/themes/tsv_paunzhausen/images/logo.png",
+        alt: "",
+      },
+    },
+    awayTeam: {
+      name: "",
+      logo: {
+        url: "https://image.jimcdn.com/app/cms/image/transf/none/path/sa86be514f450597c/image/i595114f6305cb21b/version/1542297781/image.png",
+        alt: "",
+      },
+    },
+    result: "2:1",
+    date: "23.06.2021",
+    time: "08:25",
   },
 };
