@@ -5,7 +5,6 @@ export function renderDate(date: string) {
     weekday: "short",
     day: "2-digit",
     month: "2-digit",
-    year: "numeric",
   }).format(parsedDate);
 
   return newDate;

@@ -31,6 +31,11 @@ const GlobalStyle = createGlobalStyle`${css`
   p {
     margin: 0;
   }
+
+  a {
+    text-decoration: none;
+    color: var(--main-color);
+  }
 `}`;
 
 export default GlobalStyle;
