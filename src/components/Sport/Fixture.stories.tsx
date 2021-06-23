@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react";
 import PageSection from "../../elements/PageSection";
-import Fixture, { Props } from "./Fixture";
+import Fixture, { FixtureProps } from "./Fixture";
 
 export default {
   title: "Sport/Fixture",
@@ -10,8 +10,8 @@ export default {
   },
 } as Meta;
 
-const Template: Story<Props> = (args) => <Fixture {...args} />;
-const PageTemplate: Story<Props> = (args) => (
+const Template: Story<FixtureProps> = (args) => <Fixture {...args} />;
+const PageTemplate: Story<FixtureProps> = (args) => (
   <PageSection title="Ergebnis">
     <Fixture {...args} />
   </PageSection>
@@ -65,7 +65,7 @@ WithoutDetailsResult.args = {
 
 export const WithDetails = Template.bind({});
 WithDetails.args = {
-  showDetails: true,
+  layout: "details",
   match: {
     homeTeam: {
       name: "TSV Paunzhausen",
@@ -92,7 +92,7 @@ WithDetails.args = {
 
 export const WithDetailsWithoutNewsUrl = Template.bind({});
 WithDetailsWithoutNewsUrl.args = {
-  showDetails: true,
+  layout: "details",
   match: {
     homeTeam: {
       name: "TSV Paunzhausen",
