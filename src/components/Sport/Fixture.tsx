@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import NextImage from "next/image";
-import { renderDate } from "../../services";
+import { checkGameState, parseDate, renderDate } from "../../services";
 import NextLink from "next/link";
 
 export type Props =
@@ -12,9 +12,9 @@ export type Props =
         result: string;
         date: string;
         time: string;
-        competitionName: never;
-        newsUrl: never;
-        matchday: never;
+        competitionName?: never;
+        newsUrl?: never;
+        matchday?: never;
       };
     }
   | {
@@ -42,13 +42,15 @@ function Fixture({ showDetails, match }: Props) {
     matchday,
     newsUrl,
   } = match;
+  const gameState = checkGameState(date, time, result);
+  const dateToRender = renderDate(date);
 
   return (
     <Article showDetails={showDetails}>
       {showDetails && (
         <MetaWrapper>
           <Meta>
-            {renderDate(date)} - {time} Uhr
+            {dateToRender} - {time} Uhr
           </Meta>
           <Meta>
             {competitionName}, {matchday}. Spieltag
@@ -65,7 +67,7 @@ function Fixture({ showDetails, match }: Props) {
             objectFit="contain"
           />
         </TeamLogo>
-        <Result>{result || "-"}</Result>
+        <Result>{gameState}</Result>
         <TeamLogo>
           <NextImage
             src={awayTeam.logo.url || "/placeholders/team-logo.svg"}
@@ -78,7 +80,7 @@ function Fixture({ showDetails, match }: Props) {
       </Scoring>
       {!showDetails && (
         <Meta>
-          {renderDate(date)} - {time} Uhr
+          {dateToRender} - {time} Uhr
         </Meta>
       )}
       {showDetails && newsUrl && (

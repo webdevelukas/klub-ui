@@ -35,8 +35,8 @@ WithoutDetails.args = {
       },
     },
     result: "2:1",
-    date: "21.03.2012",
-    time: "13:59",
+    date: "23.06.2021",
+    time: "08:25",
   },
 };
 
@@ -58,7 +58,7 @@ WithoutDetailsResult.args = {
       },
     },
     result: "",
-    date: "21.03.2012",
+    date: "21.06.2021",
     time: "12:00",
   },
 };
@@ -82,7 +82,7 @@ WithDetails.args = {
       },
     },
     result: "2:1",
-    date: "21.03.2012",
+    date: "23.06.2021",
     time: "14:00",
     competitionName: "413 Kreisklasse 3",
     matchday: 23,
@@ -109,7 +109,7 @@ WithDetailsWithoutNewsUrl.args = {
       },
     },
     result: "2:1",
-    date: "21.03.2012",
+    date: "24.06.2021",
     time: "14:00",
     competitionName: "413 Kreisklasse 3",
     matchday: 23,
