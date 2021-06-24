@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`${css`
   html {
     --main-color: #820000;
     --content-background: white;
+    --content-background-alternative: #efefef;
     --small-spacing: 0.5rem;
     --medium-spacing: 1rem;
     --large-spacing: 2rem;
