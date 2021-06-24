@@ -20,12 +20,9 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: var(--small-spacing);
-  padding: var(--small-spacing);
-  background-color: var(--content-background);
 
   @media screen and (min-width: 576px) {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: var(--medium-spacing);
-    padding: var(--medium-spacing);
   }
 `;

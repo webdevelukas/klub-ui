@@ -38,7 +38,9 @@ function TabContainer({ matches, standings, teamMembers }: TabContainerProps) {
         )}
         {standings && activeTab === 1 && <Standings standings={standings} />}
         {teamMembers && activeTab === 2 && (
-          <TeamMembersGrid teamMembers={teamMembers} />
+          <Wrapper>
+            <TeamMembersGrid teamMembers={teamMembers} />
+          </Wrapper>
         )}
       </div>
     </section>
@@ -67,4 +69,13 @@ const Tab = styled.div<{ active: boolean }>`
 
 const H3 = styled.h3`
   text-transform: uppercase;
+`;
+
+const Wrapper = styled.div`
+  padding: var(--small-spacing);
+  background-color: var(--content-background);
+
+  @media screen and (min-width: 576px) {
+    padding: var(--medium-spacing);
+  }
 `;
