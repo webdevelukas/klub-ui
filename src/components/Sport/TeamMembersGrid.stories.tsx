@@ -6,7 +6,7 @@ export default {
   title: "Sport/Team Members Grid",
   component: TeamMembersGrid,
   parameters: {
-    componentSubtitle: "Displays a team member of a sports team",
+    componentSubtitle: "Displays a grid of team members",
   },
 } as Meta;
 
@@ -14,5 +14,5 @@ const Template: Story<TeamMembersGridProps> = (args) => (
   <TeamMembersGrid {...args} />
 );
 
-export const Player = Template.bind({});
-Player.args = { teamMembers };
+export const Players = Template.bind({});
+Players.args = { teamMembers };

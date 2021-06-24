@@ -5,7 +5,7 @@ export default {
   title: "Sport/Team Member",
   component: TeamMember,
   parameters: {
-    componentSubtitle: "Displays a grid of team members",
+    componentSubtitle: "Displays a team member of a sports team",
   },
 } as Meta;
 
