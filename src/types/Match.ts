@@ -4,10 +4,7 @@ export type Match = {
   result: string;
   date: string;
   time: string;
-};
-
-export type DetailedMatch = Match & {
-  competitionName: string;
-  newsUrl: string;
-  matchday: number;
+  competitionName?: string;
+  newsUrl?: string;
+  matchday?: number;
 };

@@ -2,10 +2,10 @@ import styled from "styled-components";
 import NextImage from "next/image";
 import { checkGameState, renderDate } from "../../../services";
 import NextLink from "next/link";
-import { DetailedMatch } from "../../../types";
+import { Match } from "../../../types";
 
 type Props = {
-  match: DetailedMatch;
+  match: Match;
 };
 
 export function Detailed({ match }: Props) {
@@ -29,7 +29,8 @@ export function Detailed({ match }: Props) {
           {dateToRender} - {time} Uhr
         </Meta>
         <Meta>
-          {competitionName}, {matchday}. Spieltag
+          {competitionName}
+          {matchday && `, ${matchday}. Spieltag`}
         </Meta>
       </MetaWrapper>
       <Scoring>
