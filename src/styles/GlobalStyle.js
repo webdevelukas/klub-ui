@@ -7,7 +7,8 @@ const GlobalStyle = createGlobalStyle`${css`
     box-sizing: border-box;
   }
   html {
-    --main-color: #820000;
+    --main-color: hsl(0, 100%, 25%);
+    --text-color: hsl(0, 100%, 5%);
     --content-background: white;
     --content-background-alternative: #efefef;
     --small-spacing: 0.5rem;
@@ -31,6 +32,10 @@ const GlobalStyle = createGlobalStyle`${css`
   h3,
   p {
     margin: 0;
+  }
+
+  p {
+    color: var(--text-color);
   }
 
   a {
