@@ -22,7 +22,7 @@ const GridContainer = styled.div`
   gap: var(--small-spacing);
 
   @media screen and (min-width: 576px) {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: var(--medium-spacing);
   }
 `;

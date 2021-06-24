@@ -8,3 +8,5 @@ export type Match = {
   newsUrl?: string;
   matchday?: number;
 };
+
+export type Matches = Match[];
