@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import NextImage from "next/image";
-import { checkGameState, renderDate } from "../../../services";
-import { Match } from "../../../types";
+import { checkGameState, renderDate } from "../../../../services";
+import { Match } from "../../../../types";
 
 type Props = {
   match: Match;

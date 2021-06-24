@@ -1,5 +1,5 @@
-import { Match } from "../../types";
-import { Normal, Detailed, Minified } from "./Fixtures";
+import { Match } from "../../../types";
+import { Normal, Detailed, Minified } from "./Variants";
 
 export type FixtureLayoutVariants = "normal" | "detailed" | "minified";
 

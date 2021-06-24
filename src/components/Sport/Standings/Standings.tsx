@@ -1,6 +1,6 @@
 import styled, { CSSProperties } from "styled-components";
 import NextImage from "next/image";
-import { SoccerStandings } from "../../types";
+import { SoccerStandings } from "../../../types";
 
 interface TableCellProps extends CSSProperties {
   "--rank-color": string | undefined;

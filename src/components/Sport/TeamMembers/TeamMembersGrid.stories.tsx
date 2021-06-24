@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react";
 import TeamMembersGrid, { TeamMembersGridProps } from "./TeamMembersGrid";
-import { teamMembers } from "../../api/teamMembers";
+import { teamMembers } from "../../../api/teamMembers";
 
 export default {
   title: "Sport/Team Members Grid",

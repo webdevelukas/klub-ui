@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react";
 import FixturesList, { FixturesListProps } from "./FixturesList";
-import { matches } from "../../api/matches";
+import { matches } from "../../../api/matches";
 
 export default {
   title: "Sport/FixturesList",

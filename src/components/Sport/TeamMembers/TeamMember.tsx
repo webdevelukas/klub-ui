@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import NextImage from "next/image";
-import { TeamMember as TeamMemberType } from "../../types";
+import { TeamMember as TeamMemberType } from "../../../types";
 
 export type TeamMemberProps = {
   teamMember: TeamMemberType;

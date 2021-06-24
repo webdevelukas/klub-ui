@@ -1,6 +1,6 @@
 import React from "react";
-import List from "../../elements/List";
-import { Match } from "../../types";
+import List from "../../../elements/List";
+import { Match } from "../../../types";
 import Fixture, { FixtureLayoutVariants } from "./Fixture";
 
 export type FixturesListProps = {

@@ -1,7 +1,7 @@
 import { Story, Meta } from "@storybook/react";
 import Standings, { Props } from "./Standings";
-import { standings } from "../../api/standings";
-import PageSection from "../../elements/PageSection";
+import { standings } from "../../../api/standings";
+import PageSection from "../../../elements/PageSection";
 
 export default {
   title: "Sport/Standings",

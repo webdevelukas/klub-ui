@@ -1,5 +1,5 @@
 import TeamMember from "./TeamMember";
-import { TeamMembers } from "../../types";
+import { TeamMembers } from "../../../types";
 import styled from "styled-components";
 
 export type TeamMembersGridProps = { teamMembers: TeamMembers };
