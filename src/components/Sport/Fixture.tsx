@@ -1,8 +1,10 @@
 import { Match } from "../../types";
 import { Normal, Detailed, Minified } from "./Fixtures";
 
+export type FixtureLayoutVariants = "normal" | "detailed" | "minified";
+
 export type FixtureProps = {
-  layout?: "normal" | "detailed" | "minified";
+  layout?: FixtureLayoutVariants;
   match: Match;
 };
 
