@@ -18,7 +18,7 @@ export default PageSection;
 
 const H3 = styled.h3`
   background-color: var(--content-background);
-  padding: var(--medium-spacing);
+  padding: var(--medium-spacing) 0;
   color: var(--main-color);
   text-transform: uppercase;
   font-size: 1.25rem;
