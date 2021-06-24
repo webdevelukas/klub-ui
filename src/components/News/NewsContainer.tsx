@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import List from "../../elements/List";
 import { NewsArticles } from "../../types";
 import NewsListItem from "./NewsListItem";
@@ -11,7 +12,9 @@ function NewsContainer({ articles }: NewsContainerProps) {
   return (
     <>
       {articles.length === 0 && (
-        <div>Sorry, but there is nothing we can talk about.</div>
+        <NoNewsMessage>
+          Sorry, but there is nothing we can talk about.
+        </NoNewsMessage>
       )}
       {articles.length > 0 && (
         <List>
@@ -26,3 +29,9 @@ function NewsContainer({ articles }: NewsContainerProps) {
 }
 
 export default NewsContainer;
+
+const NoNewsMessage = styled.p`
+  background-color: var(--content-background-alternative);
+  padding: var(--medium-spacing);
+  text-align: center;
+`;
