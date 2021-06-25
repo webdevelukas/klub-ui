@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`${css`
   html {
     --main-color: hsl(0, 100%, 25%);
     --text-color: hsl(0, 100%, 5%);
+    --highlight-color: hsl(0, 100%, 55%);
     --content-background: white;
     --content-background-alternative: #efefef;
     --small-spacing: 0.5rem;
@@ -30,6 +31,7 @@ const GlobalStyle = createGlobalStyle`${css`
   h1,
   h2,
   h3,
+  h4,
   p {
     margin: 0;
   }
@@ -38,9 +40,13 @@ const GlobalStyle = createGlobalStyle`${css`
     color: var(--text-color);
   }
 
+  small {
+    font-size: 0.75rem;
+  }
+
   a {
     text-decoration: none;
-    color: var(--main-color);
+    color: var(--highlight-color);
   }
 `}`;
 
